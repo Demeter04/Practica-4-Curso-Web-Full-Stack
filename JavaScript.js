@@ -102,6 +102,8 @@ const ListaAnimales = [
     "Oso",
     "Conejo",
     "Pez",
+    "Satan",
+    "pila",
 ]
 /* Obtener el tamaño de la lista    */
 console.log("Tamaño del array", ListaAnimales.length)
@@ -113,19 +115,125 @@ console.log("Tamaño del array", ListaAnimales.length)
 /* i o contador = inicializar en */
 
 // condiciones
-/* -igualdad: === */
-/* -menor que: < */
-/* -mayor que: > */
-/* -menor o igual que: <= */
-/* -mayor o igual que: >= */
+/*  -igualdad: ===  */
+/*  Diferente de: !==  */
+/*  -menor que: <  */
+/*  -mayor que: > */
+/*  -menor o igual que: <=  */
+/*  -mayor o igual que: >=  */
+
+// ------------------------- Bucles = un proceso que se repite --------------------------------
 
 // Una forma
 for( let contador = 0; contador <= 4; contador++) {
     console.log(contador)
     console.log(ListaAnimales[contador])
-}
+} 
 // segunda forma automatizada 
 for( let i = 0; i < ListaAnimales.length; i++){
     console.log(i)
     console.log(ListaAnimales[i])
 }
+ 
+// ---------------- VALIDACIONES ----------------------
+// IF = CONDICION == Si hago esto, pasa esto....
+// Else = caso contrario
+/* Ejemplo mio declarar para declarar si son muchos animales */
+
+if (ListaAnimales.length>=6){
+    console.log("Son muchos")
+}
+else {
+    console.log(ListaAnimales)
+}
+
+/* EJEMPLO CONDICION DE VALIDACION DE UNA PALABRA */
+if("Hola"==="hola"){
+    console.log("la condicion es verdadera")
+}
+else{
+    console.log("La condicion es falsa")
+}
+
+/* EJEMPLO VALIDACION DE UNA VARIABLE */
+let numero = 13 
+
+if (numero === 10){
+    console.log("La condicion es verdadera")
+}
+else if (numero === 11 ){ 
+    console.log("La condicion es falsa ")
+}
+else if (numero === 12){
+    console.log("El numero es 12")  
+}
+else
+{
+console.log("El numero no es ni 10, ni 11, ni 12")
+}
+
+//OPERADORES LOGICOs
+// and = y - &&
+// or = o - ||
+
+let texto = "algo"
+
+if (texto === "ALGO" || texto === "Algo"){
+    console.log("La frase es verdadera")
+}
+else{
+    console.log("La frase no tiene mayuscula")
+}
+
+/* Validacion contraseña con una letra*/
+let password = "A123456"; // La contraseña debería ser una cadena
+const letras = /[a-zA-Z]/.test(password)
+if (password.length < 6 || password === "123456"|| !letras) {
+    console.log("No es segura");
+} else if (password.length >= 6 && password !== "123456") {
+    console.log("Su contraseña es segura");
+}
+
+// -------------------------- Bucles - while (No recomendado)--------------------------
+let i = 0
+while (i<7){
+    console.log("animal:",ListaAnimales[i])
+    i++
+    console.log("ciclo:", i)
+}
+
+// ------------------------ Funciones ----------------------
+// estructuras reciben parametros, procesarlos y devuelven parametros
+// Ademas de encapsular código
+
+// Caracterisitcas 
+// 1. Agrupar codigo relacionado a un cierto fin
+// 2. La funcion es reutilizable
+
+// Function en JavaScript Antiguo
+/* Parametros son los valores que debe recibir en este caso valor1 y valor2 */
+function sumar(valor1, valor2){
+    let resultado = valor1+valor2
+    return resultado
+}
+
+
+/* Llamado o ejecución de la función */
+
+// Forma uno de guardado en una variable
+let n6 = 3
+let resultadoSuma = sumar(n6,4)
+console.log("resultado suma forma uno:",resultadoSuma)
+
+// Forma dos de escribir sin guardar en una variable
+console.log("resultado suma forma dos:",sumar(11,4))
+
+
+// Function en ECMAScript
+// funcion flecha
+
+const resta = (valor1,valor2) => {
+    let resultado = valor1-valor2
+    return resultado
+}
+console.log("resultado resta funcion flecha:",resta (3,2))
