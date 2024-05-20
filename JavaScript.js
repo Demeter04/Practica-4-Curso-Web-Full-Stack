@@ -59,7 +59,7 @@ let ListaDeListas = [ListaDeNumeros, ListaCiudades]
 console.log(ListaDeListas[1][1])
 
 // ------------------- JSON (JavaScript Object Notation) = Objetos -------------------
-// clave - valor 
+// Estructura: clave - valor {} 
 let usuario = {
     nombre:"Oscar", 
     clave:1234, 
@@ -67,11 +67,65 @@ let usuario = {
     ubicacion: {
         latidud: 1.202312,
         longitud: -2.2216598,
-    }
+    },
+    amigos: ["sebastian","pedro"]
 }
 console.log(usuario)
 console.log(usuario.clave)
 console.log(usuario.ubicacion)
 
+/* Cambiar una propiedad de un JSON */
 usuario.clave = "oscar123"
 console.log(usuario.clave)
+
+// ------------------- Tipos de datos vacios (Especiales) (Errores)-------------------
+
+/* null = nulo */
+const espacioVacio = null
+
+/* undefined = indefinido */
+let noDefinido = undefined
+
+/* Not a Number = No es un numero */
+const noEsNumero = NaN
+const operacionMat = 10 * "Hola"
+console.log(operacionMat)
+
+// ------------------ Estructuras de Control --------------------
+
+// Bucles = un proceso que se repite
+// loop = blucle infinito
+
+const ListaAnimales = [
+    "Perro",
+    "Gato",
+    "Oso",
+    "Conejo",
+    "Pez",
+]
+/* Obtener el tamaño de la lista    */
+console.log("Tamaño del array", ListaAnimales.length)
+
+/* For indica un bucle */
+/* parametro 1: contador */
+/* parametro 2: condicion para que se detenga*/
+/* parametro 3: comportamiento del contador */
+/* i o contador = inicializar en */
+
+// condiciones
+/* -igualdad: === */
+/* -menor que: < */
+/* -mayor que: > */
+/* -menor o igual que: <= */
+/* -mayor o igual que: >= */
+
+// Una forma
+for( let contador = 0; contador <= 4; contador++) {
+    console.log(contador)
+    console.log(ListaAnimales[contador])
+}
+// segunda forma automatizada 
+for( let i = 0; i < ListaAnimales.length; i++){
+    console.log(i)
+    console.log(ListaAnimales[i])
+}
